@@ -13,6 +13,7 @@ Organizzare i singoli membri in card/schede
 BONUS 3:
 Permettere l'aggiunta di un nuovo membro del team */
 
+//our array
 const ourTeam = [
     {
         fullName: 'Wayne Barnett',
@@ -45,3 +46,12 @@ const ourTeam = [
         photo: 'barbara-ramos-graphic-designer.jpg'
     }
 ];
+
+//stamp values of every member
+for (let i = 0; i < ourTeam.length; i++) {  
+    const ourMember = ourTeam[i];
+    for (const key in ourMember) {
+        const value = ourMember[key];
+        console.log(value);
+    }
+}
