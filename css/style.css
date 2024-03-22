@@ -31,3 +31,10 @@ main .card-img-top {
 main .card-text {
     font-weight: 400;
 }
+main section:last-child {
+    padding: 50px 0;
+}
+main section:last-child form {
+    max-width: 500px;
+    margin: 0 auto;
+}
