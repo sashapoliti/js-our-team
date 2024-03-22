@@ -78,3 +78,19 @@ function createTeam(arrayOfObject) {
         teamSection.appendChild(card);
     }
 }
+
+//form
+const button = document.querySelector('form button');
+button.addEventListener('click',(e)=>{	
+    e.preventDefault(); // no referesh first
+	const name = document.getElementById('name').value;
+	const role = document.getElementById('role').value;
+	const image = document.getElementById('photo').value;
+	let newTeamMember = {
+		fullName: name,
+		role: role,
+		photo: image
+	}
+    ourTeam.push(newTeamMember);
+	createTeam(ourTeam);    
+})
