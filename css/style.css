@@ -1,7 +1,33 @@
 /* general */
 body {
     background-color: #F5F5F1;
-    color: #67615A;
+    color: #333333;
     font-weight: 500;
     font-size: 1em;
+}
+
+/* header */
+header {
+    margin: 60px 0 40px 0;
+}
+header>div {
+    max-width: 600px;
+}
+header h1 {
+    font-size: 1.3rem;
+}
+header p {
+    color: #67615A;
+    font-weight: 400;
+}
+
+/* main */
+main .card,
+main .card-img-top {
+    border-radius: 0;
+    border: 0;
+    color: #67615A;
+}
+main .card-text {
+    font-weight: 400;
 }
