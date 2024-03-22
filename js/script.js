@@ -48,10 +48,33 @@ const ourTeam = [
 ];
 
 //stamp values of every member
-for (let i = 0; i < ourTeam.length; i++) {  
+/* for (let i = 0; i < ourTeam.length; i++) {  
     const ourMember = ourTeam[i];
     for (const key in ourMember) {
         const value = ourMember[key];
         console.log(value);
+    }
+} */
+
+createTeam(ourTeam);
+
+function createTeam(arrayOfObject) {
+    const teamSection = document.querySelector('main section:first-child');
+    teamSection.innerHTML = ''; //reset section
+    for (let i = 0; i < arrayOfObject.length; i++) {  
+        const ourMember = arrayOfObject[i];
+        const card = document.createElement('div');
+        card.className = 'col-12 col-md-6 col-lg-4';
+        const cardTemplate = `
+            <div class="card">
+                <img src="img/${ourMember.photo}" class="card-img-top" alt="${ourMember.fullName}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${ourMember.fullName}</h5>
+                    <p class="card-text">${ourMember.role}</p>
+                </div>
+            </div>
+        `;
+        card.innerHTML = cardTemplate;
+        teamSection.appendChild(card);
     }
 }
